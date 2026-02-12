@@ -8,6 +8,10 @@ android {
         version = release(36)
     }
 
+    tasks.withType<Test>{
+        useJUnitPlatform()
+    }
+
     defaultConfig {
         applicationId = "com.example.ListyCity"
         minSdk = 24
@@ -35,21 +39,15 @@ android {
 
 dependencies {
     implementation(libs.appcompat)
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.0.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.0.1")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(files("C:/Users/Daksh Sethi/AppData/Local/Android/Sdk/platforms/android-36/android.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.0.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.0.1")
-    //noinspection GradlePath
-    implementation(files("C:/Users/Daksh Sethi/AppData/Local/Android/Sdk/platforms/android-36/android.jar"))
+    testImplementation("org.junit.jupiter:junit-jupiter-api:6.0.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:6.0.2")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.0.2")
 }
+

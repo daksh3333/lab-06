@@ -9,14 +9,14 @@ import java.util.List;
  */
 
 public class CityList {
-    private List<com.example.listycity.City> cities = new ArrayList<>();
+    private List<com.example.ListyCity.City> cities = new ArrayList<>();
 
     /**
      * This adds a city to the list if the city does not exist
      * @param city
      *      This is a candidate city to add
      */
-    public void add(com.example.listycity.City city) {
+    public void add(com.example.ListyCity.City city) {
         if (cities.contains(city)) {
             throw new IllegalArgumentException();
         }
@@ -27,8 +27,8 @@ public class CityList {
      * @return
      * Return the sorted list
      */
-    public List<com.example.listycity.City> getCities() {
-        List<com.example.listycity.City> list = cities;
+    public List<com.example.ListyCity.City> getCities() {
+        List<com.example.ListyCity.City> list = cities;
         Collections.sort(list);
         return list;
     }
@@ -37,7 +37,7 @@ public class CityList {
      * @param city The city to check for
      * @return True if the city is in the list, false otherwise
      */
-    public boolean hasCity(com.example.listycity.City city) {
+    public boolean hasCity(com.example.ListyCity.City city) {
         return cities.contains(city);
     }
 
@@ -46,7 +46,7 @@ public class CityList {
      * @param city The city to remove
      * @throws IllegalArgumentException if the city is not found in the list
      */
-    public void delete(com.example.listycity.City city) {
+    public void delete(com.example.ListyCity.City city) {
         if (!cities.contains(city)) {
             throw new IllegalArgumentException();
         }
